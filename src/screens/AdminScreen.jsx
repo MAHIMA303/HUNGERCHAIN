@@ -1,32 +1,37 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
+import { 
+  View, Text, TextInput, TouchableOpacity, StyleSheet, Alert 
+} from "react-native";
 
-const LoginScreen = ({ navigation }) => {
-  const [email, setEmail] = useState("");
+const AdminScreen = ({ navigation }) => {
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    console.log("Email:", email);
-    console.log("Password:", password);
-    // Add authentication logic here
-    alert("Login Clicked!");
+    if (username === "admin" && password === "123") {
+      navigation.navigate("HomeScreen"); // Navigate directly
+    } else {
+      Alert.alert("Login Failed", "Invalid username or password.");
+    }
   };
+  
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>HungerChain Login</Text>
+      <Text style={styles.title}>Admin Login</Text>
       
       <TextInput
         style={styles.input}
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-        keyboardType="email-address"
+        placeholder="Username"
+        placeholderTextColor="#888"
+        value={username}
+        onChangeText={setUsername}
       />
       
       <TextInput
         style={styles.input}
         placeholder="Password"
+        placeholderTextColor="#888"
         value={password}
         onChangeText={setPassword}
         secureTextEntry
@@ -34,10 +39,6 @@ const LoginScreen = ({ navigation }) => {
       
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Login</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate("Register")}>
-        <Text style={styles.link}>Don't have an account? Sign Up</Text>
       </TouchableOpacity>
     </View>
   );
@@ -48,40 +49,38 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#121212",
     padding: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: "bold",
+    color: "#fff",
     marginBottom: 20,
   },
   input: {
     width: "100%",
-    padding: 10,
+    padding: 12,
     marginVertical: 10,
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#555",
     borderRadius: 8,
-    backgroundColor: "#fff",
+    backgroundColor: "#222",
+    color: "#fff",
   },
   button: {
-    backgroundColor: "#3498db",
+    backgroundColor: "#ff9800",
     padding: 15,
     borderRadius: 8,
     width: "100%",
     alignItems: "center",
-    marginVertical: 10,
+    marginTop: 10,
   },
   buttonText: {
     color: "#fff",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "bold",
-  },
-  link: {
-    color: "#3498db",
-    marginTop: 10,
   },
 });
 
-export default LoginScreen;
+export default AdminScreen;

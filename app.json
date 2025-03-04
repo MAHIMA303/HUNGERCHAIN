@@ -1,4 +1,10 @@
 {
-  "name": "Hexahackers",
-  "displayName": "Hexahackers"
+  "expo": {
+    "name": "HungerChain",
+    "slug": "hungerchain",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "entryPoint": "index.js",
+    "sdkVersion": "49.0.0"
+  }
 }
