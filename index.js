@@ -1,6 +1,4 @@
-import 'react-native-polyfill-globals/auto';
+import { registerRootComponent } from "expo";
+import App from "./App";
 
-// Manually define setImmediate if still missing
-if (typeof global.setImmediate === 'undefined') {
-  global.setImmediate = (fn, ...args) => setTimeout(fn, 0, ...args);
-}
+registerRootComponent(App);
