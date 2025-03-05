@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const HomeScreen = () => {
+const VolunteerHomeScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to Home Screen</Text>
+      <Text style={styles.text}>Welcome, Volunteer!</Text>
     </View>
   );
 };
@@ -16,11 +16,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#121212",
   },
-  title: {
+  text: {
     fontSize: 24,
     color: "#fff",
     fontWeight: "bold",
   },
 });
 
-export default HomeScreen;
+export default VolunteerHomeScreen;
