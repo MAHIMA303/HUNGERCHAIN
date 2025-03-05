@@ -12,6 +12,7 @@ import VolunteerHomeScreen from "../screens/VolunteerHomeScreen";
 import NgoHomeScreen from "../screens/NgoHomeScreen";
 import DonorHomeScreen from "../screens/DonorHomeScreen";
 import DonorDonationScreen from "../screens/DonorDonationScreen";
+import SignInScreen from "../screens/SignInScreen";
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,8 @@ const StackNavigator = () => {
         <Stack.Screen name="NgoScreen" component={NgoScreen} />
         <Stack.Screen name="VolunteerScreen" component={VolunteerScreen} />
         <Stack.Screen name="AdminScreen" component={AdminScreen} />
+        <Stack.Screen name="SignInScreen" component={SignInScreen} />
+        <Stack.Screen name="HomeScreen" component={LoginScreen} />
         <Stack.Screen name="AdminHomeScreen" component={AdminHomeScreen} />
         <Stack.Screen name="VolunteerHomeScreen" component={VolunteerHomeScreen} />
         <Stack.Screen name="NgoHomeScreen" component={NgoHomeScreen} />

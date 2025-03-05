@@ -25,7 +25,7 @@ const LoginScreen = ({ navigation }) => {
         <Text style={styles.buttonText}>Admin</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("NgoScreen")}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("SignInScreen")}>
         <Text style={styles.buttonText}>Already an user? Sign in here</Text>
       </TouchableOpacity>
     </View>
