@@ -9,7 +9,7 @@ const AdminScreen = ({ navigation }) => {
 
   const handleLogin = () => {
     if (username === "admin" && password === "123") {
-      navigation.navigate("HomeScreen"); // Navigate directly
+      navigation.navigate("AdminHomeScreen"); // Navigate directly
     } else {
       Alert.alert("Login Failed", "Invalid username or password.");
     }
