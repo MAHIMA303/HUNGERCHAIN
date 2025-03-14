@@ -83,7 +83,7 @@ const NgoHomeScreen = ({ navigation }) => {
 
   return (
     <ImageBackground 
-      source={require('../assets/background.jpeg')} 
+      source={require('../assets/background.jpg')} 
       style={styles.background} 
       resizeMode="cover"
     >
