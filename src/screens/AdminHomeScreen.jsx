@@ -30,7 +30,7 @@ const AdminHomeScreen = () => {
 
   return (
     <ImageBackground
-      source={require("../assets/background.png")} // Ensure correct path
+      source={require("../assets/backgrd.jpeg")} // Ensure correct path
       style={styles.background}
     >
       <View style={styles.overlay}>
